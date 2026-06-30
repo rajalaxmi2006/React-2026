@@ -1,24 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const NoteForm = () => {
+  const [title, setTitle] = useState("");
 
-    const [title,setTitle] = useState("");
+  const [desc, setDesc] = useState("");
 
-    const [desc,setDesc] = useState("");
-
-    function handelChange(e){
-        setTitle(e.target.value)
-        console.log(e.target.value);
-        
-    }
+  function handelChange(e) {
+    setTitle(e.target.value);
+    console.log(e.target.value);
+  }
 
   return (
     <div>
-        <input type="text" placeholder='Enter Title' value={title} type="text" onChange={handelChange} />
-        <textarea placeholder='Enter Description' value={desc}></textarea>
-        <button>Add Notes</button>
+      <input
+        placeholder="Enter Title"
+        value={title}
+        type="text"
+        onChange={handelChange}
+      />
+      <textarea placeholder="Enter Description" value={desc}></textarea>
+      <button>Add Notes</button>
     </div>
-  )
-}
+  );
+};
 
-export default NoteForm
+export default NoteForm;
