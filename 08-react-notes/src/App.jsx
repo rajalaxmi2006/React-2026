@@ -1,16 +1,36 @@
-import React from 'react'
-import Header from './components/Header'
-import NoteForm from './components/NoteForm'
+// import { useState } from "react";
 
-const App = () => {
-  return (
-    <div>
-      <h1>
-        <Header/>
-        <NoteForm/>
-      </h1>
-    </div>
-  )
-}
+// import Header from "./components/Header";
+// import NoteForm from "./components/NoteForm";
+// import NoteList from "./components/NoteList";
+// import NoteCard from "./components/NoteCard";
 
-export default App
+// function App() {
+//   const [notes, setNotes] = useState([]);
+
+//   const addNote = (title, description) => {
+//     const newNote = {
+//       id: Date.now(),
+//       title,
+//       desc
+//     };
+//     setNotes([...notes, newNote]);
+//   };
+
+//   const deleteNote = (id) => {
+//     const updatedNotes = notes.filter((note) => {
+//       return note.id !== id;
+//     });
+//     setNotes(updatedNotes);
+//   };
+
+//   return (
+//     <>
+//       <Header />
+//       <NoteForm addNote={addNote} />
+//       <NoteList notes={notes} deleteNote={deleteNote} />
+//     </>
+//   );
+// }
+
+// export default App;

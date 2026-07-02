@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
 
-const NoteCard = () => {
+const NoteCard = ({ id, titel, desc, deleteNote }) => {
   return (
-    <div>NoteCard</div>
-  )
-}
+    <div className="note-card">
+      <h3>{titel}</h3>
+      <p>{desc}</p>
+      <button
+        onClick={() => {
+          deleteNote(id);
+        }}
+      >
+        Delete
+      </button>
+    </div>
+  );
+};
 
-export default NoteCard
+export default NoteCard;

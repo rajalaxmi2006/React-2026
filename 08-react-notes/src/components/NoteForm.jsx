@@ -1,25 +1,41 @@
 import React, { useState } from "react";
 
-const NoteForm = () => {
+const NoteForm = ({addNote}) => {
   const [title, setTitle] = useState("");
 
   const [desc, setDesc] = useState("");
 
-  function handelChange(e) {
+  function handelTitle(e) {
     setTitle(e.target.value);
-    console.log(e.target.value);
+  }
+
+  function handleDesc(e) {
+    setDesc(e.target.value);
   }
 
   return (
-    <div>
+    <div className="form-container">
       <input
         placeholder="Enter Title"
         value={title}
         type="text"
-        onChange={handelChange}
+        onChange={handelTitle}
       />
-      <textarea placeholder="Enter Description" value={desc}></textarea>
-      <button>Add Notes</button>
+      <textarea
+        placeholder="Enter Description"
+        value={desc}
+        type="text"
+        onChange={handleDesc}
+      ></textarea>
+      <button
+        onClick={() => {
+          addNote(title, desc);
+          setTitle("");
+          setDesc("");
+        }}
+      >
+        Add Notes
+      </button>
     </div>
   );
 };
