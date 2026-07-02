@@ -27,7 +27,6 @@ function NoteForm({ addNote }) {
       <button
         onClick={() => {
           addNote(title, description);
-
           setTitle("");
 
           setDescription("");

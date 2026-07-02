@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import Header from "./components/Header";
-
 import NoteForm from "./components/NoteForm";
 import NoteList from "./components/NoteList";
 import NoteCard from "./components/NoteCard";
