@@ -36,3 +36,5 @@ Facebook Software Engineer, Jordan Walke, created it.
 
 <!-- older version : never showing in vscode 
 modern version : (react compiler) showing in vscode -->
+
+<!-- share data in between modules: props -->
