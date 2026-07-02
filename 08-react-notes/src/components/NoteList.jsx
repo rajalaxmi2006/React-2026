@@ -7,7 +7,7 @@ function NoteList({ notes, deleteNote }) {
 
   return (
     <div className="notes-container">
-      {notes.map((note) => {
+      {notes.map((note) => (
         <NoteCard
           key={note.id}
           title={note.title}
@@ -15,7 +15,7 @@ function NoteList({ notes, deleteNote }) {
           id={note.id}
           deleteNote={deleteNote}
         />
-      })}
+      ))}
     </div>
   );
 }

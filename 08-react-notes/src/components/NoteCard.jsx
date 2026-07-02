@@ -1,10 +1,13 @@
-import React from "react";
-
-const NoteCard = ({ id, titel, desc, deleteNote }) => {
+function NoteCard({
+  id,
+  title,
+  description,
+  deleteNote,
+}) {
   return (
     <div className="note-card">
-      <h3>{titel}</h3>
-      <p>{desc}</p>
+      <h3>{title}</h3>
+      <p>{description}</p>
       <button
         onClick={() => {
           deleteNote(id);
@@ -14,6 +17,6 @@ const NoteCard = ({ id, titel, desc, deleteNote }) => {
       </button>
     </div>
   );
-};
+}
 
 export default NoteCard;

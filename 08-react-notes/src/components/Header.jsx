@@ -1,15 +1,9 @@
-import React from 'react'
-
-const Header = () => {
-  return (
-    <div>
+function Header() {
+    return (
         <header>
-            <h1>
-                📝React Notes Keeper
-            </h1>
+            <h1>📝 React Notes Keeper</h1>
         </header>
-    </div>
-  )
+    );
 }
 
-export default Header
+export default Header;

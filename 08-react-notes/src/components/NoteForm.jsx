@@ -1,43 +1,42 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const NoteForm = ({addNote}) => {
+function NoteForm({ addNote }) {
   const [title, setTitle] = useState("");
 
-  const [desc, setDesc] = useState("");
-
-  function handelTitle(e) {
-    setTitle(e.target.value);
-  }
-
-  function handleDesc(e) {
-    setDesc(e.target.value);
-  }
+  const [description, setDescription] = useState("");
 
   return (
     <div className="form-container">
       <input
-        placeholder="Enter Title"
+        type="text"
         value={title}
-        type="text"
-        onChange={handelTitle}
+        onChange={(event) => {
+          setTitle(event.target.value);
+        }}
+        placeholder="Enter title"
       />
+
       <textarea
-        placeholder="Enter Description"
-        value={desc}
-        type="text"
-        onChange={handleDesc}
-      ></textarea>
+        value={description}
+        onChange={(event) => {
+          setDescription(event.target.value);
+        }}
+        placeholder="Enter description"
+      />
+
       <button
         onClick={() => {
-          addNote(title, desc);
+          addNote(title, description);
+
           setTitle("");
-          setDesc("");
+
+          setDescription("");
         }}
       >
-        Add Notes
+        Add Note
       </button>
     </div>
   );
-};
+}
 
 export default NoteForm;
