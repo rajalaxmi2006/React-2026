@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Header from "./components/Header";
+
 import NoteForm from "./components/NoteForm";
 import NoteList from "./components/NoteList";
 import NoteCard from "./components/NoteCard";
@@ -12,7 +13,7 @@ function App() {
     const newNote = {
       id: Date.now(),
       title,
-      desc
+      description,
     };
     setNotes([...notes, newNote]);
   };
