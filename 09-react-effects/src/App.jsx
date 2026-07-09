@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
+  
 
-  console.log("Start");
-  document.title= "react-effects";
-  console.log("title");
+  const [count,setCount]=useState(0);
+  console.log(count);
   
   return (
     <div>
